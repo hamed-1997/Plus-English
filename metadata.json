@@ -1,0 +1,6 @@
+{
+  "name": "English+",
+  "description": "Premium AI-powered English learning Progressive Web App for Persian-speaking learners with personalized CEFR journeys, Leitner spaced repetition, interactive reading, synchronized audio, and grammar mastery.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

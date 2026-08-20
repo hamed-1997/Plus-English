@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #0E6F68;
+  --color-brand-hover: #0B5853;
+  --color-brand-light: #149B91;
+  --color-brand-soft: #E6F4F2;
+  --color-brand-dark-soft: #122826;
+  --color-accent: #38E1D3;
+  
+  --color-bg-light: #F7F6F1;
+  --color-bg-dark: #101716;
+  
+  --color-surface-light: #FFFFFF;
+  --color-surface-elevated-light: #EFECE6;
+  
+  --color-surface-dark: #172220;
+  --color-surface-elevated-dark: #1F2E2C;
+  
+  --color-text-primary-light: #162725;
+  --color-text-secondary-light: #526663;
+  
+  --color-text-primary-dark: #ECF1F0;
+  --color-text-secondary-dark: #8FA3A0;
+  
+  --color-border-light: #E2DFD8;
+  --color-border-dark: #273835;
+
+  --font-en: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-fa: 'Vazirmatn', 'Segoe UI', Tahoma, sans-serif;
+  --font-display: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'Fira Code', monospace;
+}
+
+:root {
+  --app-primary: #0E6F68;
+  --app-primary-hover: #0B5853;
+  --app-accent: #149B91;
+  --app-bg: #F7F6F1;
+  --app-surface: #FFFFFF;
+  --app-surface-elevated: #EFECE6;
+  --app-text: #162725;
+  --app-text-muted: #526663;
+  --app-border: #E2DFD8;
+}
+
+.dark {
+  --app-bg: #101716;
+  --app-surface: #172220;
+  --app-surface-elevated: #1F2E2C;
+  --app-text: #ECF1F0;
+  --app-text-muted: #8FA3A0;
+  --app-border: #273835;
+}
+
+/* Persian / RTL Font support */
+[dir="rtl"] {
+  font-family: 'Vazirmatn', 'Segoe UI', Tahoma, sans-serif;
+}
+
+[dir="ltr"] {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+/* Safe areas for mobile devices */
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 16px);
+}
+
+.safe-top {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+
+/* Mobile smooth touch scrolling */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Word highlight in reader */
+.highlight-sentence {
+  background-color: rgba(14, 111, 104, 0.15);
+  border-radius: 4px;
+  box-shadow: 0 0 0 2px rgba(14, 111, 104, 0.2);
+  transition: all 0.25s ease;
+}
+
+.dark .highlight-sentence {
+  background-color: rgba(56, 225, 211, 0.18);
+  box-shadow: 0 0 0 2px rgba(56, 225, 211, 0.25);
+}
+
+/* Flashcard 3D perspective for Leitner */
+.perspective-1000 {
+  perspective: 1000px;
+}
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Interactive word hover/tap feedback */
+.interactive-word {
+  cursor: pointer;
+  display: inline;
+  padding: 1px 2px;
+  border-radius: 4px;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.interactive-word:hover, .interactive-word:active {
+  background-color: rgba(14, 111, 104, 0.14);
+  color: #0E6F68;
+}
+
+.dark .interactive-word:hover, .dark .interactive-word:active {
+  background-color: rgba(56, 225, 211, 0.2);
+  color: #38E1D3;
+}
